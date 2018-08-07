@@ -26,6 +26,7 @@ export const pageQuery = graphql`
         node {
           title
           content
+          id
         }
       }
     }
