@@ -18,15 +18,16 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query pageQuery {
-    allContentfulEntry (filter : {
-      node_locale : {eq: "en-US"}
+    allContentfulEntry (filter : { node_locale : {eq: "en-US"}
     })
     {
       edges {
         node {
           title
-          content
           id
+          content {
+            content
+          }
         }
       }
     }
