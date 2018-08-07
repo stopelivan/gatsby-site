@@ -4,7 +4,7 @@ import Link from 'gatsby-link'
 
 const BlogPost = ({node}) => {
     return (
-      <li>{node.title}</li>
+      <li>{node.inhalt.inhalt}</li>
     )
 }
 
@@ -25,8 +25,8 @@ export const pageQuery = graphql`
         node {
           title
           id
-          content {
-            content
+          inhalt {
+            inhalt
           }
         }
       }
